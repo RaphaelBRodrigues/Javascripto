@@ -3,7 +3,8 @@ const app = express();
 
 
 app.get("/",(req,res) =>{
-    res.send("HEEEEELLOOOOOOOOOOOOOOOOOOOO");
+    //res.sendFile(__dirname+"/../html/index.html");
+    res.sendFile("/home/raphael/Desktop/Pessoal/node/exercicios/http/html/index.html");
 });
 
 app.get("/sobre",(req,res)=>{
