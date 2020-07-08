@@ -15,6 +15,9 @@ app.get("/raphael",(req,res)=>{
 res.send("Raphael Barbosa Rodrigues");
 });
 
+app.get("/ola/:nome/:cargo/:senioridade",(req,res)=>{
+    res.send("Olá <i>"+req.params.nome+"</i> Você foi admitido para o cargo de "+ req.params.cargo +" "+ req.params.senioridade);
+});
 
 app.listen(8080,function(){
     console.log("Servidor criado!!");
