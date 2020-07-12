@@ -17,14 +17,14 @@ router.get("/posts",(req,res)=>{
 })
 
 router.get("/categorias",(req,res)=>{
-    Categoria.find().lean().then((categorias) =>{
+    Categoria.find({}).sort({date:"asc"}).lean().then((categorias) =>{
         res.render("admin/categorias",{categorias:categorias});
-        console.log(categorias);
+        // console.log(categorias);
     }).catch((e)=>{
         req.flash("error_msg","Erro na listagem das categorias");
         res.redirect("/admin");
     });
-    console.log("Categorias");
+    // console.log("Categorias");
 
 })
 
@@ -76,9 +76,54 @@ router.post("/categorias/novas",(req,res)=>{
 
             });
             //res.render("admin/status");
-        }
-
+        };
+   
 });
+
+    router.get("/categorias/edit/:id",(req,res)=>{
+        const dados = Categoria.findOne({_id:req.params.id}).lean().then((dados)=>{
+            res.render("admin/editCategorias",{dados:dados});
+            // console.log(dados);
+
+        }).catch(()=>{
+            req.flash("error_msg","Categoria inválida");
+            res.redirect("/admin/categorias");
+        });
+    });
+
+    router.post("/categorias/edit",(req,res)=>{
+        const id = req.body.id;
+        Categoria.findOne({_id:id}).then((categoria)=>{
+
+            categoria.nome = req.body.nome;
+            categoria.slug = req.body.slug;
+
+            categoria.save().then(()=>{
+                req.flash("success_msg","Categoria atualizada");
+                res.redirect("/admin/categorias");
+            }).catch((e)=>{
+ 
+                req.flash("error_msg","Erro na atualização da categoria"+e);
+                res.redirect("/admin/categorias");
+            })
+               
+        }).catch((error)=>{
+            req.flash("error_msg","Erro na atualização da categoria2");
+            res.redirect("/admin/categorias");
+        });
+
+        
+    });
+
+    router.post("/categorias/deletar",(req,res)=>{
+        Categoria.deleteOne({_id:req.body.id}).then(()=>{
+            req.flash("success_msg","Categoria deletada com sucesso");
+            res.redirect("/admin/categorias");
+        }).catch((e)=>{
+            req.flash("error_msg","Houve um erro ao deletar a categoria"+e);
+            res.redirect("/admin/categorias");
+        });
+    });
 
 
 module.exports = router;

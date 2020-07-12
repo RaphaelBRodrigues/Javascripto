@@ -1,0 +1,16 @@
+<h2>Atualizar de categoria</h2>
+
+
+
+<div class="card">
+    <div class="card-body">
+    <form action="/admin/categorias/edit" method="post">
+        <input type="hidden" name="id" value={{dados._id}}>
+        <label for="nome">Nome:</label>
+        <input type="text" placeholder="nome" name="nome" class="form-control" value="{{dados.nome}}">
+        <label for="nome">Slug:</label>
+        <input type="text" placeholder="slug" name="slug" class="form-control" value="{{dados.slug}}">
+        <button type="submit" class="btn btn-success mt-1">Atualizar categoria</button>
+    </form>
+</div>
+</div>
