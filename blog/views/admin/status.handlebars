@@ -1,0 +1,9 @@
+{{#each erros}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+<div class="alert alert-success">Categoria cadastrada</div>
+{{/each}}
+
+<a href="/admin/categorias/add">
+    <button class="btn btn-info">Voltar para o formulário</button>
+</a>
