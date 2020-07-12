@@ -1,0 +1,36 @@
+<h2>Atualizar de categoria</h2>
+
+
+
+<div class="card">
+    <div class="card-body">
+    <form action="/admin/postagens/editar" method="post">
+     <label for="nome">Título:</label>
+     <input type="hidden" value="{{post._id}}" name="id">
+        <input type="text" placeholder="título" name="titulo" class="form-control" value="{{post.titulo}}">
+      
+        <label for="nome">Slug:</label>
+        <input type="text" placeholder="slug" name="slug" class="form-control" value="{{post.slug}}">
+
+       
+        <label for="nome">Descrição:</label>
+        <input type="text" placeholder="descricao" name="descricao" class="form-control" value="{{post.descricao}}">
+
+        <label for="">Categorias</label>
+        <select name="categoria" id="" class="custom-select">
+            {{#each cat}}
+                <option value="{{this._id}}">{{this.nome}}</option>
+                {{else}}
+                <option value="0" disabled>Sem categorias registradas</option>
+            {{/each}}
+        </select>
+
+        <label for="nome">Conteúdo:</label>
+        <textarea type="text" placeholder="conteudo" name="conteudo" class="form-control">
+            {{post.conteudo}}
+        </textarea>
+
+        <button type="submit" class="btn btn-success mt-1">Editar categoria</button>
+    </form>
+</div>
+</div>

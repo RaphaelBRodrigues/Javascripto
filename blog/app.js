@@ -40,9 +40,7 @@
 
 //Mongo
     mongoose.Promise = global.Promise
-    mongoose.connect("mongodb://localhost/blog",{
-        useMongoClient:true
-    }).then(()=>{
+    mongoose.connect("mongodb://localhost/blog",{}).then(()=>{
         console.log("Conectado ao banco");
     }).catch((e)=>{
         console.log("Erro"+e)
