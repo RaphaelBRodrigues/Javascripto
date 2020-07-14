@@ -12,6 +12,7 @@
     const User = require("./routes/user");
     const passport = require("passport");
     require("./config/auth")(passport);
+    const db = require("./config/db");
 
 
 
@@ -54,7 +55,7 @@
 
 //Mongo
     mongoose.Promise = global.Promise
-    mongoose.connect("mongodb://localhost/blog",{}).then(()=>{
+    mongoose.connect(db.mongoURL,{}).then(()=>{
         console.log("Conectado ao banco");
     }).catch((e)=>{
         console.log("Erro"+e)
@@ -63,7 +64,7 @@
 
 
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 app.listen(port,()=>{
     console.log("Servidor inicializado");
 })
