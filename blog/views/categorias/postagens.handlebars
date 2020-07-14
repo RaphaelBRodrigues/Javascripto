@@ -1,0 +1,29 @@
+<h2>Lista de posts:</h2>
+{{#each posts}}
+    <div class="card">
+        <div class="card-body">
+            <h4>{{this.titulo}}</h4>
+            <p>{{this.descricao}}</p>
+            <p>{{this.conteudo}}</p>
+            <small>Data:{{this.data}}</small>
+
+
+            Categoria:<b>{{this.categoria.nome}}</b>
+
+    <a href="/admin/postagens/editar/{{_id}}">
+    <button class="btn btn-info">Editar</button>
+</a>
+    <a href="/admin/postagens/deletar/{{_id}}">
+        <button class="btn btn-danger">Apagar</button>
+    </a>
+
+        </div>
+    </div>
+
+    {{else}}
+
+{{/each}}
+
+    <a href="/admin/postagens/add">
+        <button  class="btn btn-success">Cadastrar postagem</button>
+    </a>

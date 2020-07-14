@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo</h1>
+  <p class="lead">NodeJS + MongoDB + Express</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Criar conta</a>
+</div>
+
+<hr>
+
+<h2>Últimas Postagens:</h2>
+
+{{#each posts}}
+    <div class="card">
+        <div class="card-body">
+            <h4>{{this.titulo}}</h4>
+            <p>{{this.conteudo}}</p>
+            <b>{{this.categoria.nome}}</b>
+            <a href="/postagens/{{this.slug}}">
+                <button class="btn btn-info">Ler mais</button>
+            </a>
+        </div>
+    </div>
+{{/each}}
