@@ -1,0 +1,38 @@
+<%- include('partials/header')%>
+<link rel="stylesheet" href="/css/perguntar.css">
+</head>
+<body class="">
+
+<%- include('partials/nav')%>
+
+<div class="container col-11">
+    <div class="card mt-5" id="form-ask">
+        <div class="card-header">
+            <h1>
+                Perguntar
+            </h1>
+        </div>
+    <div class="card-body">
+        <form method="post" action="/perguntar">
+            <label for="">Título</label>
+            <input name="title" class="form-control mb-5" placeholder="Título">
+
+            <label for="">Título</label>
+            <textarea name="content" class="form-control">
+
+        </textarea>
+
+            <button class="btn btn-success mt-5">Perguntar</button>
+
+        </form>
+    </div>
+
+    </div>
+    <hr>
+
+</div>
+</body>
+</html>
+
+
+<%- include('partials/footer')%>

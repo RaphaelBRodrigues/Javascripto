@@ -1,10 +1,33 @@
-<html>
-    <head>
-        <title>Guia Perguntas</title>
-    </head>
-    <body>
-        <h1>
-            Olá
-        </h1>
-    </body>
+<%- include('partials/header')%>
+<link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body class="">
+<%- include('partials/nav')%>
+
+<div class="container">
+    <h1>
+        <h1>  Home </H1>
+        <a class="btn btn-primary" href="/perguntar">  Home </a>
+    </h1>
+    <% perguntas.forEach((pergunta)=>{ %>
+    <hr>
+    <div class="card mt-5">
+        <div class="card-header">
+         <%= pergunta.id %> - <%= pergunta.titulo %>
+        </div>
+        <div class="card-body">
+            <%= pergunta.descricao %>
+        </div>
+        <div class="card-footer">
+                <button class="btn btn-primary">Responder</button>
+        </div>
+    </div>
+    <% }) %>
+
+
+</div>
+</body>
 </html>
+
+<%- include('partials/footer')%>
