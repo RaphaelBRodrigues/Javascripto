@@ -17,6 +17,21 @@ router.get("/", (req, res) => {
 
 });
 
+router.get("/pergunta/:id",(req,res)=>{
+    const id = req.params.id;
+
+    PerguntaModel.findOne({where:{id}}).then((pergunta)=>{
+        if(pergunta) {
+            res.render("pergunta", {pergunta});
+        }else{
+            res.redirect("/");
+        }}).catch(()=>{
+
+            res.send("Erro");
+
+    });
+});
+
 router.get("/perguntar",(req,res)=>{
     res.render("perguntar.ejs");
 });
