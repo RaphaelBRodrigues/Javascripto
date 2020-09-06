@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc06e34b-b073-4332-8571-50729887d00f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/pergunta.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/Resposta.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +23,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
+    <property name="last_opened_file_path" value="$USER_HOME$/unasp" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="template.copyright.formatting" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -51,6 +50,8 @@
       <workItem from="1599170187565" duration="617000" />
       <workItem from="1599249178020" duration="450000" />
       <workItem from="1599268788892" duration="4066000" />
+      <workItem from="1599346147265" duration="1154000" />
+      <workItem from="1599427186361" duration="852000" />
     </task>
     <servers />
   </component>
@@ -58,10 +59,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl" timestamp="1599173700229">
+    <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl" timestamp="1599346192546">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1599173700229" />
+    <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1599346192546" />
     <state x="1537" y="0" width="1024" height="737" key="SettingsEditor" timestamp="1598999238835">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
@@ -70,11 +71,11 @@
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
     <state x="1740" y="90" width="618" height="550" key="find.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1599009658130" />
-    <state x="692" y="89" width="1344" height="678" key="search.everywhere.popup" timestamp="1599270086802">
-      <screen x="0" y="0" width="2732" height="768" />
+    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1599427319165">
+      <screen x="1366" y="0" width="1366" height="768" />
     </state>
     <state x="692" y="89" width="1344" height="678" key="search.everywhere.popup/0.0.2732.768@0.0.2732.768" timestamp="1599270086802" />
-    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1599094237263" />
+    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1599427319165" />
     <state x="1773" y="294" width="542" height="187" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1599268985456">
       <screen x="0" y="0" width="2732" height="768" />
     </state>
