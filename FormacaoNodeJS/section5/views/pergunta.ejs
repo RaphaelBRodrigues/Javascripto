@@ -18,6 +18,31 @@
         </div>
     </div>
 
+    <form action="/resposta" method="post">
+        <h1>
+            Responda a pergunta
+        </h1>
+
+        <label for="" class="mb-2">Resposta</label>
+        <textarea name="corpo" placeholder="insira sua resposta" class="form-control" cols="30" rows="10"></textarea>
+        <input name="id" type="hidden" value="<%= pergunta.id %>">
+        <button class="mt-2 btn btn-success">Responda</button>
+    </form>
+<hr>
+    <h3>Respostas</h3>
+
+
+
+    <% respostas.forEach((resposta)=>{ %>
+    <div class="card mt-3">
+        <div class="card-body">
+            <p>
+                <%= resposta.resposta %>
+            </p>
+        </div>
+    </div>
+
+    <% }) %>
 
 </div>
 </body>

@@ -3,12 +3,14 @@ const connection = require("./database");
 
 
 const Resposta = connection.define("Resposta",{
-    title:{type:Sequelize.STRING},
-    answer:{type:Sequelize.TEXT}
+    perguntaId:{type:Sequelize.INTEGER,allowNull: false},
+    resposta:{type:Sequelize.TEXT,allowNull:false}
 });
 
 Resposta.sync({force:false}).then(()=>{
-    console.log("Model Pergunta criado");
+    console.log("Model Resposta criado");
+}).catch((err)=>{
+    console.log(err);
 });
 
 module.exports = Resposta;

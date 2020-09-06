@@ -20,15 +20,28 @@ router.get("/", (req, res) => {
 
 router.get("/pergunta/:id",(req,res)=>{
     const id = req.params.id;
+    let respostas = [];
+
+    RespostaModel.findAll({
+        where:{perguntaId:id},
+        order:[['perguntaId','DESC']]
+    }).then((data)=>{
+        respostas = data;
+
+    }).catch(()=>{
+        respostas = [];
+    });
+
+    console.log(respostas);
 
     PerguntaModel.findOne({where:{id}}).then((pergunta)=>{
         if(pergunta) {
-            res.render("pergunta", {pergunta});
+            res.render("pergunta", {pergunta,respostas});
         }else{
             res.redirect("/");
-        }}).catch(()=>{
+        }}).catch((err)=>{
 
-            res.send("Erro");
+            res.send(err);
 
     });
 });
@@ -51,35 +64,21 @@ router.post("/perguntar",(req,res)=>{
     });
 })
 
-router.get("/resposta/:pergunta?",(req,res)=>{
+router.post("/resposta",(req,res)=>{
 
-    if(req.query.title){
         RespostaModel.create({
-        title:req.query.title,
-        answer:req.query.answer
+            perguntaId:req.body.id,
+            resposta:req.body.corpo
 
     }).then(()=>{
-        res.send({
-            pergunta:req.params.pergunta,
-            status:200,
-            message:"Registro criado"
-        });
+            res.redirect("/pergunta/"+req.body.id);
     }).catch((err)=>{
-        res.send({err});
+        res.redirect("/pergunta/"+req.body.id);
     });
-    }else{
-        RespostaModel.findAll({raw:true}).then((data)=>{
-            res.send({
-                status:200,
-                data
-            });
-        }).catch(()=>{
-            res.send({
-                status:400,
-                message:"Falha ao recuperar registro"
-            });
-        });
-    }
+
+
+
+
 
 
 
