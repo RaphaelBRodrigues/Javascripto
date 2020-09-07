@@ -58,6 +58,29 @@ router.post("/categories/delete/",(req,res)=>{
     }
 
      res.redirect("/admin/categories");
+});
+
+router.get("/admin/categories/edit/:id",(req,res)=>{
+    CategoryModel.findByPk(req.params.id).then((category)=>{
+        if(category){
+            res.render("admin/categories/edit", {category});
+        }else{
+            res.redirect("/admin/categories/");
+        }
+    }).catch(()=>{
+        res.redirect("/admin/categories/");
+    });
+});
+
+router.post("/categories/update",(req,res)=> {
+    const id = req.body.id;
+    const title = req.body.title;
+    CategoryModel.update({title,slug:slugify(title)},{where:{id}}).then(()=>{
+        res.redirect("/admin/categories/");
+    }).catch((err)=>{
+        res.send({id,err});
+
+    });
 
 });
 

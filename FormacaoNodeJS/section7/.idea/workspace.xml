@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c11bc56-763f-4bbc-aa4b-790968b53372" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/articles/Article.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/articles/articlesController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/categories/Category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/categories/index.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/categories/new.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/partials/footer.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin/categories/edit.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../section5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/categories/categoriesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/categories/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/categories/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/articles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/admin/categories" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -37,6 +34,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views/admin/categories" />
       <recent name="$PROJECT_DIR$/articles" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
@@ -49,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599431012245</updated>
-      <workItem from="1599431013403" duration="9513000" />
+      <workItem from="1599431013403" duration="11254000" />
     </task>
     <servers />
   </component>
