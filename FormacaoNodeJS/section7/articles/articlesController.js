@@ -72,10 +72,23 @@ router.get("/category/:slug", async (req, res) => {
     }catch(err){
         res.send({err});
     }
+});
 
+router.get("/admin/articles/edit/:id",async (req,res)=>{
+    const { id } = req.params;
 
+    const categories = await CategoryModel.findAll({raw:true});
+    const article = await articleModel.findOne({ where:{id}});
 
+    res.render("admin/articles/edit.ejs",{categories,article});
+});
 
+router.post("/articles/update",async (req,res)=>{
+    const { category , title ,body , id } = req.body;
+
+     await articleModel.update({CategoryId:category,title,body,slug:slugify(title)},{where:{id}});
+
+    res.redirect("/admin/articles");
 });
 
 module.exports = router;

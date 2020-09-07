@@ -5,13 +5,24 @@
 <div class="container mt-5">
     <div class="card">
         <div class="card-header">
-        <h2>Edição de categoria</h2>
+            <h2>Cadastre um artigo</h2>
         </div>
         <div class="card-body">
-            <form action="/categories/update" method="post">
-                <input type="text" value="<%= category.title %>" name="title" class="form-control mb-3 mt-3">
-                <input type="hidden" name="id" value="<%= category.id %>">
-                <button class="btn btn-success">Atualizar</button>
+            <form action="/articles/update" method="post">
+                <input autofocus type="text"name="title" value="<%= article.title %>" placeholder="Title" class="form-control mb-3 mt-3">
+                <textarea placeholder="Insira o texto" id="article" rows="10"  class="col-12" name="body">
+                    <%- article.body %>
+                </textarea>
+                <label for="">Categorias</label>
+                <select class="form-control" name="category">
+                    <% categories.forEach((category)=>{ %>
+                        <option value="<%= category.id %>">
+                            <%= category.title %>
+                        </option>
+                    <% })%>
+                </select>
+                <input type="hidden"  value="<%= article.id %>" name="id">
+                <button class="mt-5 btn btn-success">Cadastrar</button>
             </form>
         </div>
     </div>
@@ -24,4 +35,13 @@
 
 
 </body>
+<script src="/tinymce/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector:'#article',
+        plugins:['advlist autolink image lists print hr searchreplace wordcount fullscreen insertdatetime media save paste table emoticons']
+    });
+</script>
+
+
 <%- include("../../partials/footer.ejs") %>

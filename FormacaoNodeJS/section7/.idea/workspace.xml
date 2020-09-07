@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c11bc56-763f-4bbc-aa4b-790968b53372" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/articles.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/partials/homeNavbar.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../section5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/articles/articlesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/articles/articlesController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tinymce_5.4.2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tinymce_languages.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/articles/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/articles/edit.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin/articles/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/articles/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/articles/new.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/articles/new.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/nav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/nav.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +66,7 @@
       <workItem from="1599431013403" duration="13944000" />
       <workItem from="1599483265490" duration="1320000" />
       <workItem from="1599494691654" duration="9343000" />
-      <workItem from="1599516150269" duration="697000" />
+      <workItem from="1599516150269" duration="2036000" />
     </task>
     <servers />
   </component>

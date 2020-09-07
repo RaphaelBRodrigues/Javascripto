@@ -31,7 +31,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="e050a23f-71a2-4032-ac5b-99c7646f65e9">
-      <console name="Local" type="STANDARD" schema="" session="Main" />
+      <console name="Local" type="STANDARD" schema="" session="Main"><![CDATA[SELECT * FROM Articles;]]></console>
       <console name="Local 1" type="STANDARD" schema="mysql" session="Main"><![CDATA[USE guiapress;
 
 SHOW TABLES;
