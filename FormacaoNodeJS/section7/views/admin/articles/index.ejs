@@ -5,57 +5,69 @@
 
 <div class="container mt-5">
     <hr>
-    <h1 class="mb-3">Categorias</h1>
-    <a class="btn btn-success mb-5" href="/admin/categories/new">Criar nova categoria</a>
+    <h1 class="mb-3">Artigos</h1>
+    <a class="btn btn-success mb-5" href="/admin/articles/new">Criar novo artigo</a>
     <table class="table table-bordered">
         <thead>
-            <tr>
-                <th>
-                    ID
-                </th>
-                <th>
-                    Título
-                </th>
-                <th>
-                    Slug
-                </th>
-                <th>
-                    Ações
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <% categories.forEach((category)=>{ %>
         <tr>
             <th>
-                <%= category.id %>
+                ID
             </th>
             <th>
-                <%= category.title %>
+                Título
             </th>
             <th>
-                <%= category.slug %>
+                Slug
             </th>
             <th>
-                <a href="/admin/categories/edit/<%= category.id %>">  <button class="btn btn-warning">Editar</button> </a>
-                <form onsubmit="deleteConfirm(event)" style="display: inline" method="post" action="/categories/delete/"><input type="hidden" name="id" value="<%= category.id %>"/> <button class="btn btn-danger">Deletar</button></form>
+                Category
+            </th>
+            <th>
+                Ações
             </th>
         </tr>
-        <%  }) %>
+        </thead>
+        <tbody>
+        <% articles.forEach((article)=>{ %>
+            <tr>
+                <th>
+                    <%= article.id %>
+                </th>
+                <th>
+                    <%= article.title %>
+                </th>
+                <th>
+                    <%= article.slug %>
+                </th>
+                <th>
+                    <% if(article.Category){ %>
+                    <%=  article.Category.title %>
+                    <% }%>
+                </th>
+                <th>
+                    <a href="/admin/categories/edit/<%= article.id %>">
+                        <button class="btn btn-warning">Editar</button>
+                    </a>
+                    <form onsubmit="deleteConfirm(event)" style="display: inline" method="post"
+                          action="/articles/delete/"><input type="hidden" name="id" value="<%= article.id %>"/>
+                        <button class="btn btn-danger">Deletar</button>
+                    </form>
+                </th>
+            </tr>
+        <% }) %>
         </tbody>
     </table>
 </div>
-
 
 
 </body>
 <%- include("../../partials/footer.ejs") %>
 
 <script>
-    function deleteConfirm(event){
+    function deleteConfirm(event) {
         event.preventDefault();
         const deleteCategory = confirm("Deseja deletar a categoria");
-        if(deleteCategory){
+        if (deleteCategory) {
             event.target.submit();
         }
     }
