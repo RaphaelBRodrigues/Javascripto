@@ -86,9 +86,33 @@ router.get("/admin/articles/edit/:id",async (req,res)=>{
 router.post("/articles/update",async (req,res)=>{
     const { category , title ,body , id } = req.body;
 
-     await articleModel.update({CategoryId:category,title,body,slug:slugify(title)},{where:{id}});
+    try{
+        await articleModel.update({CategoryId:category,title,body,slug:slugify(title)},{where:{id}});
+        res.redirect("/admin/articles");
+    }catch (err){
+        res.redirect("/");
+    }
+});
 
-    res.redirect("/admin/articles");
+router.get("/articles/pages/:num",async (req,res)=>{
+    const  num  = parseInt(req.params.num);
+    let offset = 0;
+    let next = true;
+    if(num == 1){
+        offset = 0;
+    }else{
+        offset = (num - 1) * 4;
+    }
+
+    const Articles = await articleModel.findAndCountAll({limit:4,offset});
+    const Categories = await CategoryModel.findAll({raw:true});
+    if(offset + 4 > Articles.count){
+        next = false;
+    }
+
+
+    res.render("admin/articles/page.ejs",{articles:Articles.rows, next,Categories,page:num});
+
 });
 
 module.exports = router;

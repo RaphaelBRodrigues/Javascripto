@@ -1,29 +1,13 @@
-<%- include("partials/header.ejs") %>
+<%- include("../../partials/header.ejs") %>
 <body>
 
-<%- include("partials/homeNavbar.ejs") %>
+<%- include("../../partials/homeNavbar.ejs") %>
 
 
 
 <div class="container mt-5">
     <hr>
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Artigos</h1>
-                <p>
-                    Projeto prático do curso de Node.js do Guia Do Programador
-                </p>
-                <hr>
 
-                <p>
-                    JS <3
-                </p>
-
-                <button class="btn btn-primary"> Acessar </button>
-
-            </div>
-
-        </div>
 
         <% articles.forEach((article)=>{ %>
 
@@ -43,15 +27,24 @@
         </div>
         <% }) %>
 
+
     <div class="row">
         <div class="col" >
-            <a href="/articles/pages/2" style="float: right" >Próxima Página >></a>
+            <% if(page >= 2){ %>
+              <a href="/articles/pages/<%= page - 1 %>" style="float: left" ><< Página Anterior</a>
+                <%}%>
+        <% if(next){ %>
+              <a href="/articles/pages/<%= page + 1%>" style="float: right" >Próxima Página >></a>
+            <% }else{%>
+
+            <% }%>
         </div>
-            <hr>
+        <hr>
     </div>
+
 </div>
 
 
 
 </body>
-<%- include("partials/footer.ejs") %>
+<%- include("../../partials/footer.ejs") %>

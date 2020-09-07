@@ -16,10 +16,17 @@
                 <label for="">Categorias</label>
                 <select class="form-control" name="category">
                     <% categories.forEach((category)=>{ %>
+                        <% if(category.id == article.CategoryId){%>
+                            <option selected value="<%= category.id %>">
+                                <%= category.title %>
+                            </option>
+                        <% }else{%>
                         <option value="<%= category.id %>">
                             <%= category.title %>
                         </option>
-                    <% })%>
+                        <% }%>
+
+                        <% })%>
                 </select>
                 <input type="hidden"  value="<%= article.id %>" name="id">
                 <button class="mt-5 btn btn-success">Cadastrar</button>
