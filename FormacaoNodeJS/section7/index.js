@@ -6,6 +6,7 @@ const connection = require("./database/database");
 const router = require("./home/routes");
 const articlesController = require("./articles/articlesController");
 const categoriesController = require("./categories/categoriesController");
+const userController = require("./user/UserController");
 
 
 
@@ -20,6 +21,7 @@ app.use(express.static("public"));
 app.use(router);
 app.use("/",categoriesController);
 app.use("/",articlesController);
+app.use("/",userController);
 
 app.get("*",(req,res)=>{
     res.status(404).redirect("/");
