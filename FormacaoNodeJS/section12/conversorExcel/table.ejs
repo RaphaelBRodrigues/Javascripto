@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        Tabela
+    </title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <% header.forEach((col)=>{ %>
+            <th>
+                <%= col %>
+            </th>
+        <% }) %>
+    </tr>
+    </thead>
+    <tbody>
+    <% rows.forEach((rowItem)=>{ %>
+        <tr>
+             <% rowItem.forEach((item)=>{ %>
+                   <td>
+                       <%= item %>
+                   </td>
+            <% }) %>
+        </tr>
+
+    <% }) %>
+    </tbody>
+</table>
+</body>
+</html>
