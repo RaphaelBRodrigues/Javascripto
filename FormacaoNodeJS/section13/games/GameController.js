@@ -2,9 +2,23 @@ const router = require("express").Router();
 const Game = require("./Game");
 
 
+router.delete("/game/:id",(req,res)=>{
+    const { id } = req.params;
 
+    if(isNaN(id)){
+        res.sendStatus(400);
+    }else{
+        const status = Game.destroy({where: {id}});
+        if(status){
+            res.statusCode = 200;
+            res.json({status});
+        }else{
+            res.statusCode = 404;
+        }
+    }
+});
 
-router.post("/games",async (req,res)=>{
+router.post("/game",async (req,res)=>{
     const { title , price , release } = req.body;
     try{
         const result = await Game.create({
@@ -12,7 +26,7 @@ router.post("/games",async (req,res)=>{
             title,
             release:Date.now()
         });
-        res.statusCode = 200;
+        res.statusCode = 201;
         res.json({result});
     }catch (err){
         res.statusCode = 400;
@@ -57,9 +71,33 @@ router.get("/game/:id",async (req,res)=>{
         res.statusCode = 400;
         res.json({err});
     }
-
-
-
 });
+
+router.put("/game/:id",async (req,res)=>{
+    const { title , price , release } = req.body;
+    const { id } = req.params;
+
+    if(isNaN(id)){
+        res.sendStatus(400);
+    }
+
+    try{
+        const game = await Game.findByPk(id);
+
+
+        game.title = title ? title : game.title;
+        game.price = price ? price : game.price;
+        game.release = release ? release : game.release;
+
+        const att = await Game.update({ ...game.dataValues },{where:{id}});
+
+        res.statusCode = 200;
+        res.json({att});
+    }catch (err){
+        console.log(err);
+        res.sendStatus(500);
+    }
+});
+
 
 module.exports = router;
