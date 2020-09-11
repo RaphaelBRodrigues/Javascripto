@@ -1,4 +1,4 @@
-const connection = require("./connection");
+const connection = require("../db/connection");
 const Sequelize = require("sequelize");
 
 const Game = connection.define("Games",{
