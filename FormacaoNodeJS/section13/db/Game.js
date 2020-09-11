@@ -7,6 +7,6 @@ const Game = connection.define("Games",{
     release:{type:Sequelize.DATE,allowNull:false,}
 });
 
-Game.sync({force:true});
+// Game.sync({force:true});
 
 module.exports = Game;
