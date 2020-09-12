@@ -8,15 +8,6 @@
     </head>
     <body>
 
-    <form  id="form-login" action="">
-        <label>Email</label><input name="email">
-        <br>
-        <label>Senha</label><input  name="password">
-        <button>
-            Logar
-        </button>
-    </form>
-
         <h4>
             Lista de jogos
         </h4>
@@ -49,45 +40,13 @@
 
 <script>
 
-
     let games = [];
-    const login = document.getElementById("form-login");
     const list = document.getElementById("game-list");
     const formCadastro = document.getElementById("form-cadastro");
     const formEdit = document.getElementById("form-edit");
     const buttonEditId = document.getElementById("form-edit-id");
     const gamesAPI = axios.create({
-        baseURL:"http://localhost:8080/",
-        headers:{
-            Authorization:""
-        }
-    });
-
-    login.addEventListener("submit",async (e)=>{
-        e.preventDefault();
-
-        const data = new FormData(login);
-        const email = data.get("email");
-        const password = data.get("password");
-
-        const req = {
-            email,
-            password
-        }
-
-        console.table(req);
-
-       const res = await gamesAPI.post("auth",req);
-
-       console.table(res);
-
-       if(res.status == 200){
-            gamesAPI.defaults.headers.Authorization = "bears "+ res.data.token;
-            console.table(gamesAPI.defaults.headers);
-
-        }
-
-       await getGames();
+        baseURL:"http://localhost:8080/"
     });
 
     async function getGames(){
