@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const CategoryModel = require("./Category");
 const slugify = require("slugify");
+const {adminAuth } = require("../middlewares/adminAuth");
 
-
-router.get("/categories",(req,res)=>{
+router.get("/categories",adminAuth,(req,res)=>{
 
     CategoryModel.findAll().then(data=>{
         console.log(data);
@@ -15,11 +15,11 @@ router.get("/categories",(req,res)=>{
     res.send({})
 });
 
-router.get("/admin/categories/new",(req,res)=>{
+router.get("/admin/categories/new",adminAuth,(req,res)=>{
     res.render("admin/categories/new.ejs");
 });
 
-router.post("/categories/save",(req,res)=>{
+router.post("/categories/save",adminAuth,(req,res)=>{
     let title = req.body['title'];
     console.log("title:"+title);
     if(title != undefined){
@@ -36,7 +36,7 @@ router.post("/categories/save",(req,res)=>{
     }
 });
 
-router.get("/admin/categories",(req,res)=>{
+router.get("/admin/categories",adminAuth,(req,res)=>{
 
     CategoryModel.findAll({raw:true}).then((categories)=>{
         res.render("admin/categories/index", {categories});
@@ -46,7 +46,7 @@ router.get("/admin/categories",(req,res)=>{
 
 });
 
-router.post("/categories/delete/",(req,res)=>{
+router.post("/categories/delete/",adminAuth,(req,res)=>{
     const id = req.body.id;
     if(id) {
         CategoryModel.destroy({where:{id}}).then((data) => {
@@ -60,7 +60,7 @@ router.post("/categories/delete/",(req,res)=>{
      res.redirect("/admin/categories");
 });
 
-router.get("/admin/categories/edit/:id",(req,res)=>{
+router.get("/admin/categories/edit/:id",adminAuth,(req,res)=>{
     CategoryModel.findByPk(req.params.id).then((category)=>{
         if(category){
             res.render("admin/categories/edit", {category});
@@ -72,7 +72,7 @@ router.get("/admin/categories/edit/:id",(req,res)=>{
     });
 });
 
-router.post("/categories/update",(req,res)=> {
+router.post("/categories/update",adminAuth,(req,res)=> {
     const id = req.body.id;
     const title = req.body.title;
     CategoryModel.update({title,slug:slugify(title)},{where:{id}}).then(()=>{

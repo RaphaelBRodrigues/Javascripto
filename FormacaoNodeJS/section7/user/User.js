@@ -13,6 +13,5 @@ const User = connection.define("User",{
     }
 });
 
-User.sync({force:true});
 
 module.exports = User;

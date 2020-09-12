@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Consumindo API
+        </title>
+    </head>
+    <body>
+
+        <h4>
+            Lista de jogos
+        </h4>
+
+        <ul id="game-list">
+        </ul>
+
+        <form method="post" id="form-cadastro">
+            <label>Título</label><input name="title">
+            <br>
+            <label>Preço</label><input  name="price">
+            <button>
+                Cadastrar
+            </button>
+        </form>
+    <hr>
+    <form method="post" id="form-edit">
+        <label for="title">Título</label><input id="title" name="title">
+        <br>
+        <label for="price">Preço</label><input id="price" name="price">
+        <button name="form-edit-id" id="form-edit-id">
+            Atualizar
+        </button>    </form>
+
+
+
+    </body>
+</html>
+<script src="axios.js"></script>
+
+<script>
+
+    let games = [];
+    const list = document.getElementById("game-list");
+    const formCadastro = document.getElementById("form-cadastro");
+    const formEdit = document.getElementById("form-edit");
+    const buttonEditId = document.getElementById("form-edit-id");
+    const gamesAPI = axios.create({
+        baseURL:"http://localhost:8080/"
+    });
+
+    async function getGames(){
+        try{
+            const response = await gamesAPI.get("games");
+            games = response.data["games"];
+
+
+            games.forEach((game)=>{
+
+                const li = document.createElement("li");
+                li.setAttribute("data-id",game.id);
+                li.setAttribute("data-price",game.price);
+
+                const p = document.createElement("p");
+                p.innerText = `${game.title} R$${game.price}`;
+
+                const buttonDelete = document.createElement("button");
+                buttonDelete.innerText = "X";
+                buttonDelete.setAttribute("data-id",game.id);
+                buttonDelete.onclick = () => deleteProduct(game.id);
+
+                const buttonUpdate = document.createElement("button");
+                buttonUpdate.innerText = "Editar";
+                buttonUpdate.setAttribute("data-id",game.id);
+                buttonUpdate.onclick = () => loadProduct(game.id);
+
+                li.appendChild(p);
+                li.appendChild(buttonDelete);
+                li.appendChild(buttonUpdate);
+                list.appendChild(li);
+            });
+
+        }catch (err){
+            console.log(err);
+        }
+
+    };
+    getGames();
+
+    async function loadProduct(id){
+
+        const game = await gamesAPI.get("game/"+id);
+
+        buttonEditId.setAttribute("data-id",game.data["game"]["id"]);
+        document.getElementById("title").value = game.data["game"]["title"];
+        document.getElementById("price").value = game.data["game"]["price"];
+
+        console.log(game);
+    }
+
+
+    function updateList(){
+        const list = document.getElementById("game-list");
+        const children = [...list.children];
+
+        children.map((item)=>{
+           item.remove();
+        });
+        getGames();
+    }
+
+    function deleteProduct(id){
+        gamesAPI.delete(`game/${id}`).then(()=>{
+            updateList();
+        });
+        alert("Jogo deletado");
+    }
+
+    formEdit.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        console.clear();
+        const id = buttonEditId.getAttribute("data-id");
+
+
+        const formData = new FormData(formEdit);
+        const title = formData.get("title");
+        const price = formData.get("price");
+
+
+        gamesAPI.put("game/"+id,{
+            title,
+            price,
+        }).then(()=>{
+            alert("Jogo atualizado");
+            updateList();
+        });
+
+
+
+    });
+
+
+    formCadastro.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        const formData = new FormData(formCadastro);
+        const title = formData.get("title");
+        const price = formData.get("price");
+
+        const newGame = {
+            title,
+            price,
+            release: Date.now()
+        }
+
+         gamesAPI.post("game",newGame).then(()=>{
+             alert("Produto Cadastrado");
+             updateList();
+         }).catch((err)=>{
+             console.error(err);
+             alert("Falha ao cadastrar produto");
+         });
+
+
+
+
+    });
+
+
+
+
+
+</script>

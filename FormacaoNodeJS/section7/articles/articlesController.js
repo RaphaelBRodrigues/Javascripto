@@ -3,8 +3,10 @@ const router = express.Router();
 const articleModel = require("./Article");
 const CategoryModel = require("../categories/Category");
 const slugify = require("slugify");
+const {adminAuth} = require("../middlewares/adminAuth");
 
-router.get("/admin/articles", async (req, res) => {
+
+router.get("/admin/articles", adminAuth,async (req, res) => {
     try {
         const Articles = await articleModel.findAll({include: [{model: CategoryModel}]});
         res.render("admin/articles/index.ejs", {articles: Articles});
@@ -13,13 +15,13 @@ router.get("/admin/articles", async (req, res) => {
     }
 });
 
-router.post("/articles/delete", async (req, res) => {
+router.post("/articles/delete", adminAuth,async (req, res) => {
     const {id} = req.body;
     const destroy = articleModel.destroy({where: {id}});
     res.redirect("/admin/articles");
 });
 
-router.get("/admin/articles/new", (req, res) => {
+router.get("/admin/articles/new",adminAuth, (req, res) => {
     CategoryModel.findAll({raw: true}).then((categories) => {
         res.render("admin/articles/new.ejs", {categories});
     }).catch(() => {
@@ -27,7 +29,7 @@ router.get("/admin/articles/new", (req, res) => {
     });
 });
 
-router.post("/articles/save", (req, res) => {
+router.post("/articles/save", adminAuth ,(req, res) => {
     const title = req.body.title;
     const body = req.body.body;
     const category = req.body.category;
@@ -46,7 +48,7 @@ router.post("/articles/save", (req, res) => {
 
 });
 
-router.get("/articles/:slug", async (req, res) => {
+router.get("/articles/:slug", adminAuth ,async (req, res) => {
     const {slug} = req.body;
     const Articles = await articleModel.findOne({raw: true}, {where: {slug: slug}});
     const Categories = await CategoryModel.findAll({raw: true});
@@ -56,7 +58,7 @@ router.get("/articles/:slug", async (req, res) => {
 
 });
 
-router.get("/category/:slug", async (req, res) => {
+router.get("/category/:slug", adminAuth ,async (req, res) => {
     const { slug } = req.params;
 
     try {
@@ -74,7 +76,7 @@ router.get("/category/:slug", async (req, res) => {
     }
 });
 
-router.get("/admin/articles/edit/:id",async (req,res)=>{
+router.get("/admin/articles/edit/:id",adminAuth,async (req,res)=>{
     const { id } = req.params;
 
     const categories = await CategoryModel.findAll({raw:true});
@@ -83,7 +85,7 @@ router.get("/admin/articles/edit/:id",async (req,res)=>{
     res.render("admin/articles/edit.ejs",{categories,article});
 });
 
-router.post("/articles/update",async (req,res)=>{
+router.post("/articles/update",adminAuth , async (req,res)=>{
     const { category , title ,body , id } = req.body;
 
     try{
@@ -94,7 +96,7 @@ router.post("/articles/update",async (req,res)=>{
     }
 });
 
-router.get("/articles/pages/:num",async (req,res)=>{
+router.get("/articles/pages/:num",adminAuth ,async (req,res)=>{
     const  num  = parseInt(req.params.num);
     let offset = 0;
     let next = true;

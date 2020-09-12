@@ -5,8 +5,8 @@
 
 <div class="container mt-5">
     <hr>
-    <h1 class="mb-3">Categorias</h1>
-    <a class="btn btn-success mb-5" href="/admin/categories/new">Criar nova categoria</a>
+    <h1 class="mb-3">Usuários</h1>
+    <a class="btn btn-success mb-5" href="/admin/users/create"">Criar novo usuário</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -14,32 +14,20 @@
                     ID
                 </th>
                 <th>
-                    Título
-                </th>
-                <th>
-                    Slug
-                </th>
-                <th>
-                    Ações
+                    Email
                 </th>
             </tr>
         </thead>
         <tbody>
-            <% categories.forEach((category)=>{ %>
+            <% users.forEach((user)=>{ %>
         <tr>
             <th>
-                <%= category.id %>
+                <%= user.id %>
             </th>
             <th>
-                <%= category.title %>
+                <%= user.email %>
             </th>
-            <th>
-                <%= category.slug %>
-            </th>
-            <th>
-                <a href="/admin/categories/edit/<%= category.id %>">  <button class="btn btn-warning">Editar</button> </a>
-                <form onsubmit="deleteConfirm(event)" style="display: inline" method="post" action="/categories/delete/"><input type="hidden" name="id" value="<%= category.id %>"/> <button class="btn btn-danger">Deletar</button></form>
-            </th>
+
         </tr>
         <%  }) %>
         </tbody>

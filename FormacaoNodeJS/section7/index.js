@@ -7,9 +7,16 @@ const router = require("./home/routes");
 const articlesController = require("./articles/articlesController");
 const categoriesController = require("./categories/categoriesController");
 const userController = require("./user/UserController");
+const session = require("express-session");
 
 
+app.use(session({
+    secret:"guiaprogramador123",
+    cookie:{
+        maxAge:3000000
+    },
 
+}));
 
 app.set("view engine","ejs");
 
@@ -22,6 +29,7 @@ app.use(router);
 app.use("/",categoriesController);
 app.use("/",articlesController);
 app.use("/",userController);
+
 
 app.get("*",(req,res)=>{
     res.status(404).redirect("/");

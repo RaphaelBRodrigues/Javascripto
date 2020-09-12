@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc06e34b-b073-4332-8571-50729887d00f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/Resposta.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/Resposta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pergunta.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pergunta.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="dc06e34b-b073-4332-8571-50729887d00f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +19,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/unasp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../section7" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="template.copyright.formatting" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -53,7 +48,7 @@
       <workItem from="1599268788892" duration="4066000" />
       <workItem from="1599346147265" duration="1154000" />
       <workItem from="1599427186361" duration="1746000" />
-      <workItem from="1599429005415" duration="1769000" />
+      <workItem from="1599429005415" duration="2005000" />
     </task>
     <servers />
   </component>
@@ -61,9 +56,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl" timestamp="1599346192546">
+    <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl" timestamp="1599431009781">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
+    <state x="1831" y="141" key="FileChooserDialogImpl/0.0.1366.768/1366.0.1366.768@1366.0.1366.768" timestamp="1599431009781" />
     <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1599346192546" />
     <state x="1537" y="0" width="1024" height="737" key="SettingsEditor" timestamp="1598999238835">
       <screen x="1366" y="0" width="1366" height="768" />
