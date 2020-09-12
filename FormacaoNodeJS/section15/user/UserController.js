@@ -1,5 +1,9 @@
 const UserModel = require("./User");
 const router = require("express").Router();
+const jwt = require("jsonwebtoken");
+const authenticate = require("../middleware/auth").auth;
+
+const JWTSecret = require("../middleware/auth").JWTSecret;
 
 
 router.post("/user",async (req,res)=>{
@@ -37,10 +41,23 @@ router.post("/auth",async (req,res)=>{
     }
 
     if((user.email == email) && (user.password == password)){
-        res.statusCode = 200;
-        res.json({
-            token:"54"
+
+        jwt.sign({
+            id:user.id,
+            email
+        },JWTSecret,{expiresIn:'1h'},(error,token)=>{
+            if(error){
+                res.status(500);
+                res.json({error});
+            }
+            res.statusCode = 200;
+            res.json({
+                token
+            });
         });
+
+
+
     }else{
         res.status(401);
         res.send({
@@ -48,6 +65,12 @@ router.post("/auth",async (req,res)=>{
         });
     }
 
+});
+
+router.get("/teste",authenticate,(req,res)=>{
+    res.json({
+        tesdte:"err"
+    });
 });
 
 

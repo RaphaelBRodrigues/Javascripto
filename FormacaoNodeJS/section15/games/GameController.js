@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const Game = require("./Game");
+const authenticate = require("../middleware/auth").auth;
 
 
-router.delete("/game/:id",(req,res)=>{
+router.delete("/game/:id",authenticate,(req,res)=>{
     const { id } = req.params;
 
     if(isNaN(id)){
@@ -18,7 +19,7 @@ router.delete("/game/:id",(req,res)=>{
     }
 });
 
-router.post("/game",async (req,res)=>{
+router.post("/game",authenticate,async (req,res)=>{
     const { title , price , release } = req.body;
     try{
         const result = await Game.create({
@@ -34,7 +35,7 @@ router.post("/game",async (req,res)=>{
     }
 });
 
-router.get("/games", async (req,res)=>{
+router.get("/games", authenticate,async (req,res)=>{
     try{
         const games = await Game.findAll({raw:true});
         res.json({games});
@@ -47,7 +48,7 @@ router.get("/games", async (req,res)=>{
     }
 });
 
-router.get("/game/:id",async (req,res)=>{
+router.get("/game/:id",authenticate,async (req,res)=>{
     const { id } = req.params;
 
     if(isNaN(id)){
@@ -73,7 +74,7 @@ router.get("/game/:id",async (req,res)=>{
     }
 });
 
-router.put("/game/:id",async (req,res)=>{
+router.put("/game/:id",authenticate,async (req,res)=>{
     const { title , price , release } = req.body;
     const { id } = req.params;
 
