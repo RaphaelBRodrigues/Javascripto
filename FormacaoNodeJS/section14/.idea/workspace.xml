@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05e7a58e-8373-4aae-b63b-f43180f0738f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../section5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/articles/articlesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/articles/articlesController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/categories/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/categories/categoriesController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/user/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/user/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/user/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/user/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/views/admin/users/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/views/admin/users/create.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/views/admin/users/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/views/admin/users/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/views/admin/users/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/views/admin/users/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../section7/views/partials/nav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../section7/views/partials/nav.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="05e7a58e-8373-4aae-b63b-f43180f0738f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +33,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599925423114</updated>
-      <workItem from="1599925424192" duration="10397000" />
+      <workItem from="1599925424192" duration="10753000" />
     </task>
     <servers />
   </component>
