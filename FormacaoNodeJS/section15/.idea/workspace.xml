@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/../section14/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section14/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games/GameController.js" beforeDir="false" afterPath="$PROJECT_DIR$/games/GameController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/user/UserController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
       <workItem from="1599780643630" duration="119000" />
       <workItem from="1599781351623" duration="7417000" />
       <workItem from="1599925253192" duration="166000" />
-      <workItem from="1599945507260" duration="5155000" />
+      <workItem from="1599945507260" duration="5363000" />
     </task>
     <servers />
   </component>

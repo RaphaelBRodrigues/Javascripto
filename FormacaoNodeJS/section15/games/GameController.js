@@ -35,7 +35,7 @@ router.post("/game",authenticate,async (req,res)=>{
     }
 });
 
-router.get("/games", authenticate,async (req,res)=>{
+router.get("/games",authenticate,async (req,res)=>{
     try{
         const games = await Game.findAll({raw:true});
         res.json({games});
