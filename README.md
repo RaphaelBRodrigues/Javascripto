@@ -33,4 +33,4 @@ Api's (REST && RESTFUL),orientação a objeto,ES6 ES7 ES8,programação assíncr
 * Plataforma de Perguntas e respostas (Section5)
 * Blog com painel administrativo (Section7)
 * Conversor de CSV para pdf/html (Section12)
-*
+
