@@ -1,5 +1,7 @@
 <template>
-  <div id="cliente">
+
+
+  <div id="cliente" :class="{'cliente':true,'cliente-premium': isPremium}" >
     <h1>CLIENTE </h1>
     <h4 :v-if="cliente.nome">
     Nome:   {{ cliente.nome }}
@@ -21,12 +23,26 @@
     <p>
       Email: {{ cliente.email }}
     </p>
+    <button @click="mudarCor($event)">
+      Mudar cor
+    </button>
   </div>
 
 </template>
 
 <script>
 export default {
+  methods:{
+    mudarCor:function (e){
+      console.log(e);
+      this.isPremium = !this.isPremium
+    }
+  },
+  data(){
+      return{
+        isPremium: false
+    }
+  },
   props:{
     cliente: Object,
     showIdade:Boolean
@@ -35,7 +51,12 @@ export default {
 </script>
 
 <style scoped>
-  #cliente{
+  .cliente{
     color:blue;
+    font-family: "Abyssinica SIL";
+  }
+  .cliente-premium{
+    background-color: black;
+    color:yellow;
   }
 </style>
