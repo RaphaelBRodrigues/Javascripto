@@ -128,10 +128,25 @@ async function join(){
     }
 }
 
-join();
 
-// db.raw("SELECT * FROM Estudio").then(data =>{
-//     console.log(data[0]);
-// })
+async function transaction(){
+    try{
+     await db.transaction(async (trans)=>{
+         await db.insert({title:"teste",price:54}).into("Game");
+         await db.insert({title:"teste",price:54}).into("Game");
+         await db.insert({title:"teste",price:54}).into("Game");
+         await db.insert({title:"teste",price:54}).into("Game");
+
+         //Tudo ou nada
+
+
+        });
+
+    }catch (err){
+        console.log(err);
+    }
+}
+
+transaction();
 
 
