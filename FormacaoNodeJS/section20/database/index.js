@@ -79,4 +79,59 @@ async function updateDB(){
     }
 }
 
-updateDB();
+async function selectOrder(){
+    try{
+        const data = await db.select()
+                            .from("Game")
+                                .orderBy("id","desc");
+        console.log(data);
+    }catch (err){
+        console.log(log);
+
+    }
+}
+
+async function selectJoin(){
+    try{
+        const data = await db.select()
+            .from("Game")
+            .orderBy("id","desc");
+        console.log(data);
+    }catch (err){
+        console.log(log);
+
+    }
+}
+
+async function insertStudio(){
+    try{
+        const data = {
+            name:"Betheseda",
+            game_id:4
+        };
+        const dataDB = await db.insert(data).into("Estudio");
+        console.log(dataDB);
+    }catch (err){
+        console.log(err);
+
+    }
+}
+
+
+async function join(){
+    try{
+        const dataDB = await db.select(["Game.id as Game","Estudio.id as Estudio"]).from("Game").innerJoin("Estudio","game_id","Game.id");
+        console.log(dataDB);
+    }catch (err){
+        console.log(err);
+
+    }
+}
+
+join();
+
+// db.raw("SELECT * FROM Estudio").then(data =>{
+//     console.log(data[0]);
+// })
+
+
