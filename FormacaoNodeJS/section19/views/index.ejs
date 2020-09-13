@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validando formulários</title>
+    </head>
+    <body>
+    <%= error.email %>
+    <%= error.pontos %>
+    <%= error.name %>
+        <form method="post" action="/form">
+            <input type="email" id="email" name="email" value="<%= data.email %>" placeholder="email"> <br>
+            <input type="text" id="name" name="name"  value="<%= data.name %>" placeholder="name"> <br>
+            <input type="number" id="pontos" name="pontos"  value="<%= data.pontos %>" placeholder="Pontos"> <br>
+            <button>
+                Enviaar
+            </button>
+
+        </form>
+    </body>
+</html>
