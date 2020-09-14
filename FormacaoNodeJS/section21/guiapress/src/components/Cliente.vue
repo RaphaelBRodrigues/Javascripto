@@ -26,6 +26,9 @@
     <button @click="mudarCor($event)">
       Mudar cor
     </button>
+    <button @click="emitirEventoDelete()">
+      Deletar
+    </button>
   </div>
 
 </template>
@@ -36,6 +39,9 @@ export default {
     mudarCor:function (e){
       console.log(e);
       this.isPremium = !this.isPremium
+    },
+    emitirEventoDelete:function (){
+      this.$emit("meDelete", {cliente: this,id:this.cliente.id});
     }
   },
   data(){
@@ -45,7 +51,7 @@ export default {
   },
   props:{
     cliente: Object,
-    showIdade:Boolean
+    showIdade:Boolean,
   }
 }
 </script>

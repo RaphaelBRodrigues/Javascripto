@@ -4,6 +4,8 @@
     <list default="true" id="8af10746-53e2-4fe0-a7e6-75fce39960c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../section18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section18/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../section20/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section20/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guiapress/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/guiapress/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/guiapress/src/components/Cliente.vue" beforeDir="false" afterPath="$PROJECT_DIR$/guiapress/src/components/Cliente.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600026384724</updated>
       <workItem from="1600026387085" duration="1142000" />
-      <workItem from="1600034347570" duration="6284000" />
+      <workItem from="1600034347570" duration="8571000" />
     </task>
     <servers />
   </component>

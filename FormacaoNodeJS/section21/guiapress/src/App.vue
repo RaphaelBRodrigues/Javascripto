@@ -17,7 +17,7 @@
     </h1>
     <div v-for="(cliente,index) in clientes" :key="cliente.id">
       <h1>{{ index + 1}}</h1>
-      <Cliente :cliente="cliente" />
+      <Cliente :cliente="cliente" @meDelete="deletarCliente($event)"/>
       <input v-model="cliente.nome">
 
     </div>
@@ -35,6 +35,10 @@ export default {
       this.clientes.push(this.formCliente);
       this.formCliente = {};
       alert();
+    },
+    deletarCliente:function (e){
+      const id = e.id;
+      this.clientes.splice(id - 1,1);
     }
   },
   data(){
