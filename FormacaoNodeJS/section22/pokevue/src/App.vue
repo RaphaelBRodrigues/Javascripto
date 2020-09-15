@@ -54,7 +54,7 @@ export default {
           this.filteredPokemons = this.pokemons;
       }else{
         this.filteredPokemons = this.pokemons.filter(pokemon =>{
-            return pokemon.naame == this.busca;
+            return pokemon.name == this.busca;
         });
       }
     }
