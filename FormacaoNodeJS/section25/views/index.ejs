@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Socket</title>
+</head>
+<body>
+
+<input oninput="enviarSocket()" id="word">
+<button>Enviar</button>
+<hr>
+<p id="response"></p>
+
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script>
+    const socket = io("http://localhost:8080");
+    socket.on("disconnect",()=>{
+        console.log("Desconectado");
+    })
+
+
+
+    socket.emit("boasvindas",{
+        nome:"Raphael"
+    });
+
+
+    socket.on("response",(data)=>{
+        document.getElementById("response").innerText = data;
+    })
+
+    function enviarSocket(){
+        const input = document.getElementById("word").value;
+
+        socket.emit("inputsend",{
+            input
+        });
+
+    }
+</script>
