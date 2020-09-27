@@ -52,6 +52,10 @@ class PasswordToken{
         await knex.update({used:1}).table("passwordToken").where({token});
     }
 
+    async deleteToken(user_id){
+        await knex.delete().from("passwordToken").where({user_id})
+    }
+
 
 
 }

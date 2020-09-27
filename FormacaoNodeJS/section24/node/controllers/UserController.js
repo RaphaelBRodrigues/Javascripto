@@ -11,7 +11,7 @@ class UserController{
     async create(req,res){
         const { email , name , password } = req.body;
 
-        if(email == undefined){
+        if(email == undefined || email == "" || email == " "){
             res.status(400);
             res.json({err: "Email invalido"});
         }
@@ -62,22 +62,23 @@ class UserController{
     }
     async getUserById(req,res){
         const { id } = req.params;
+    
         try{
             const user = await User.findById(id);
-
+            console.log(user);
             if(user){
                 res.status(200);
                 res.json({
-                    user
+                    user,
+                    status:1
                 });
                 return;
-            }
-
+            }else{
             res.status(404)
             res.json({
                 error:"Usuário não encontrado"
             })
-
+        }
         }catch (err){
             res.status(500);
             res.json({
@@ -110,6 +111,7 @@ class UserController{
     }
     async deleteUser(req,res){
         const { id } = req.params;
+        
         const user = await User.deleteUser(id);
         if(user){
             res.status(200);
@@ -160,8 +162,9 @@ class UserController{
 
     async login(req,res){
         const { email , password } = req.body;
+
         const user = await User.findByEmail(email);
-        const match = await bcrypt.compare(password, user[0].password )
+        const match = await bcrypt.compare(password, user[0].password)
 
 
         if(user.length > 0){

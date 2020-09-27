@@ -30,7 +30,7 @@ class User{
 
     async findAll(){
         try{
-            const data = await knex.select(["name","email"]).from("users");
+            const data = await knex.select(["name","email","role","id"]).from("users");
             console.log(data);
             return data;
         }catch (err){
@@ -40,8 +40,7 @@ class User{
     }
     async findById(id){
         try{
-            const data = await knex.select(["name","email"]).from("users").where({id});
-            console.log(data);
+            const data = await knex.select(["name","email","id"]).from("users").where({id});
             return data;
         }catch (err){
             console.log(err);
@@ -51,7 +50,8 @@ class User{
 
     async findByEmail(email){
         try{
-            const data = await knex.select(["name","email","id","password"]).from("users").where({email});
+            const data = await knex.select(["name","role","email","id","password"]).from("users").where({email});
+            console.log(data);
             return data;
         }catch (err){
             console.log(err);
@@ -94,12 +94,15 @@ class User{
        }
     }
     async deleteUser(id){
+
         try{
+            await PasswordToken.deleteToken(id);
             const userDelete = await knex.delete().from("users").where({id});
             return {
                 userDelete
             };
         }catch (err){
+            console.log(err);
             return false;
         }
     }
