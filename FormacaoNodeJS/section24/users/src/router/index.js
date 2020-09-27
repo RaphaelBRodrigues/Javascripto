@@ -6,7 +6,27 @@ import Login from '../views/Login.vue'
 import Users from '../views/Users.vue'
 import axios from 'axios';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
+async function AdminAuth(to,from,next){
+  if(localStorage.getItem("token") != ""){
+    const req = {
+      headers:{
+        Authorization: "Bearer " + localStorage.getItem("token")}
+    }
+
+    try{
+      const resp = await axios.post("http://localhost:8686/validate",{},req);
+      console.table(resp);
+      next();
+    }catch (err){
+      console.log(err);
+      next("/login");
+    }
+  }else{
+    next("/login");
+  }
+}
 
 const routes = [
   {
@@ -28,25 +48,7 @@ const routes = [
     path: '/users',
     name: 'Users',
     component: Users,
-    beforeEnter:async (to,from,next) => {
-      if(localStorage.getItem("token") != ""){
-        const req = {
-          headers:{
-            Authorization: "Bearer " + localStorage.getItem("token")}
-        }
-
-        try{
-          const resp = await axios.post("http://localhost:8686/validate",{},req);
-          console.table(resp);
-          next();
-        }catch (err){
-          console.log(err);
-          next("/login");
-        }
-      }else{
-        next("/login");
-      }
-    }
+    beforeEnter:AdminAuth
   },
   {
     path: '/about',
