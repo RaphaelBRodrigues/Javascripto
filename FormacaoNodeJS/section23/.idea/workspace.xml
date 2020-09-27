@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e8c536f0-3c3c-4a7c-9b55-4b8364bf517a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/buffer-equal-constant-time/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/buffer-equal-constant-time/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/buffer-equal-constant-time/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/buffer-equal-constant-time/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/buffer-equal-constant-time/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/buffer-equal-constant-time/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/buffer-equal-constant-time/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ecdsa-sig-formatter/CODEOWNERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ecdsa-sig-formatter/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ecdsa-sig-formatter/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ecdsa-sig-formatter/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ecdsa-sig-formatter/src/ecdsa-sig-formatter.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ecdsa-sig-formatter/src/ecdsa-sig-formatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ecdsa-sig-formatter/src/param-bytes-for-alg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/decode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/lib/JsonWebTokenError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/lib/NotBeforeError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/lib/TokenExpiredError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/lib/psSupported.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/lib/timespan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/sign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jsonwebtoken/verify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jwa/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jwa/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jwa/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jwa/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/lib/data-stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/lib/sign-stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/lib/tostring.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/lib/verify-stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/jws/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.includes/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.includes/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.includes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.includes/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isboolean/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isboolean/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isboolean/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isboolean/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isinteger/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isinteger/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isinteger/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isinteger/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isnumber/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isnumber/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isnumber/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isnumber/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isplainobject/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isplainobject/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isplainobject/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isplainobject/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isstring/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isstring/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isstring/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.isstring/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.once/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.once/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.once/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/lodash.once/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ms/license.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ms/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ms/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/safe-buffer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/safe-buffer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/safe-buffer/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/safe-buffer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/safe-buffer/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/semver/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/semver/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/semver/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/semver/bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/semver/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/semver/range.bnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/semver/semver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section18/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section20/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section20/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section21/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section21/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section22/pokevue/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../section22/pokevue/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1hZ7NnIOtIGMvtfewFMdvymjhAY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../section24" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8c536f0-3c3c-4a7c-9b55-4b8364bf517a" name="Default Changelist" comment="" />
+      <created>1600206723080</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600206723080</updated>
+      <workItem from="1600206724097" duration="1886000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl" timestamp="1600208608976">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state x="1831" y="141" width="426" height="493" key="FileChooserDialogImpl/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600208608976" />
+    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600208590546">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600208590546" />
+  </component>
+</project>

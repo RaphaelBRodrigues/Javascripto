@@ -2,6 +2,7 @@
 const knex = require("../database/connection");
 const bcrypt = require("bcrypt");
 const PasswordToken = require("../models/PasswordToken");
+const e = require("express");
 class User{
     async new(email,password,name) {
         const dataDB = await this.findEmail(email);
@@ -60,6 +61,8 @@ class User{
     }
     async updateUser(id,email,name,role){
 
+        console.log(email);
+
        const user = await this.findById(id);
 
        if(user != undefined){
@@ -78,7 +81,8 @@ class User{
 
         try{
           const user = await knex.update({...editUser}).where({id}).table("users");
-          return {user}
+            console.log(user);
+          return {user,status:true};
         }catch(err){
             return {
                 status:false,

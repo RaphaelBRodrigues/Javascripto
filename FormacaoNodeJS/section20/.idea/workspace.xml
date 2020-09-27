@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6219dbdc-af28-4e59-b22a-474dc9724106" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../section18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../section18/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +22,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../section21" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -34,7 +34,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600013386302</updated>
-      <workItem from="1600013387365" duration="6817000" />
+      <workItem from="1600013387365" duration="7968000" />
     </task>
     <servers />
   </component>
@@ -46,9 +46,13 @@
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
     <state x="1581" y="41" width="926" height="693" key="DBNavigator.ProjectSettingsDialog/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600022642177" />
-    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600022783667">
+    <state x="2097" y="167" width="426" height="493" key="FileChooserDialogImpl" timestamp="1600025557455">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600022783667" />
+    <state x="2097" y="167" width="426" height="493" key="FileChooserDialogImpl/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600025557455" />
+    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600025549017">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state x="1712" y="89" width="672" height="678" key="search.everywhere.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600025549017" />
   </component>
 </project>

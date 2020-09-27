@@ -88,12 +88,11 @@ class UserController{
     }
 
     async edit(req,res){
-        const { name , role ,email} = req.body;
+        const { name , role , email} = req.body;
         const { id } = req.params;
 
 
         const user = await User.updateUser(id,email,name,role);
-        console.log(user);
         if(user != undefined){
             if(user.status){
                 res.status(200);
@@ -111,7 +110,7 @@ class UserController{
     }
     async deleteUser(req,res){
         const { id } = req.params;
-        
+
         const user = await User.deleteUser(id);
         if(user){
             res.status(200);

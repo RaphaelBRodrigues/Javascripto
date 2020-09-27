@@ -16,11 +16,12 @@ Repositório com exercícios para o estudo de node.js
    * express-session
    * express-flash
    * cookie-parser
+   * socket.io
 
    ### Front-end
 
    * Axios
-   * Vue (em breve)
+   * Vue
 
 
  ## Projetos
@@ -33,4 +34,5 @@ Repositório com exercícios para o estudo de node.js
    * Plataforma de Perguntas e respostas (Section5)
    * Blog com painel administrativo (Section7)
    * Conversor de CSV para pdf/html (Section12)
-
+   * Sistema para o gerenciamento de usuários (Section24)
+   * Chat (Section 27)
