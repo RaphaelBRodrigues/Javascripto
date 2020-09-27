@@ -37,11 +37,14 @@ export default {
   methods:{
     async login(){
       try{
-        const resp = await axios.post("http://localhost:8686/auth",{
+        const data = {
           password:this.password,
-          email:this.email,
-        });
+          email:this.email
+        }
+        console.log(data);
+        const resp = await axios.post("http://localhost:8686/auth",data);
 
+        console.log(resp);
 
         const token = resp.data.token;
         console.log(token);

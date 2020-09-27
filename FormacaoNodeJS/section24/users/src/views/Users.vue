@@ -6,7 +6,7 @@
     <hr>
     <div class="columns is-mobile is-centered is-disabled">
       <div class="column is-half">
-        <div class="notification is-danger" v-if="error != ''">
+        <div class="notification is-danger" v-if="error">
           <p>{{ error }}</p>
         </div>
         <table class="table">
@@ -20,31 +20,7 @@
           </thead>
           <tbody>
 
-          <div v-for="(user) in users" :key="user.id">
-            <div :class="{modal:true,'is-active':showModal}">
-              <div class="modal-background"></div>
-              <div class="modal-content">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="content">
-
-                      <p>
-                        Deseja deletar o usuário?
-                      </p>
-                      <button @click="deleteUser(user.id)" class="button is-danger">
-                        Sim
-                      </button> &nbsp;
-                      <button @click="showDeleteModal()" class="button is-success">
-                        Não
-                      </button>
-                      <br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button @click="showDeleteModal" class="modal-close is-large" aria-label="close"></button>
-            </div>
-            <tr>
+          <tr v-for="(user) in users" :key="user.id">
               <td>
                 {{ user.name }}
               </td>
@@ -55,18 +31,45 @@
                 {{ user.role | showRole }}
               </td>
               <td>
-                <button @click="showDeleteModal(user.id)" class="button is-success">
-                  Editar
-                </button>
+                <router-link :to="{name:'edit',params:{id:user.id}}">
+                  <button  class="button is-success">
+                    Editar
+                  </button>
+                </router-link>
+
                 <button @click="showDeleteModal(user.id)" class="button is-danger">
                   Deletar
                 </button>
               </td>
-            </tr>
-          </div>
-          </tbody>
 
+
+          </tr>
+
+          </tbody>
         </table>
+        <div :class="{modal:true,'is-active':showModal}">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+
+                  <p>
+                    Deseja deletar o usuário?
+                  </p>
+                  <button @click="deleteUser()" class="button is-danger">
+                    Sim
+                  </button> &nbsp;
+                  <button @click="showDeleteModal()" class="button is-success">
+                    Não
+                  </button>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button @click="showDeleteModal" class="modal-close is-large" aria-label="close"></button>
+        </div>
 
       </div>
     </div>
@@ -89,7 +92,8 @@ export default {
   data() {
     return {
       users: [],
-      showModal: false
+      showModal: false,
+      deleteUserId:-1
     };
   },
   filters: {
@@ -102,6 +106,10 @@ export default {
     }
   },
   methods: {
+    editUser(id){
+      this.$router.push({path:"/edit/"+id});
+
+    },
     getUsers() {
       try {
 
@@ -123,19 +131,23 @@ export default {
       }
 
     },
-    showDeleteModal: function () {
+    showDeleteModal: function (id) {
+      this.deleteUserId = id;
       this.showModal = !this.showModal;
     },
-    deleteUser: function (user) {
+    deleteUser: function () {
         const req = {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token")
           }
         }
-        axios.delete("http://localhost:8686/user/" + user, req).then((resp) => {
+        axios.delete("http://localhost:8686/user/" + this.deleteUserId, req).then((resp) => {
               alert("Usuário deletado");
               console.log(resp);
               this.showModal = false;
+              this.users = this.users.filter(userInt => {
+                return userInt.id != this.deleteUserId
+              })
             }
         ).catch(err => {
         alert("Falha ao deletar usuário");
