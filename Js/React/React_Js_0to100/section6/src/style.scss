@@ -1,0 +1,53 @@
+$defaultColor:#FAA;
+
+.container{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    article{
+
+        background-color: $defaultColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 70%;
+        border-radius: 2em;
+        border:1px solid black;
+        padding: 1em;
+        text-align: center;
+
+        h2{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 0;
+        }
+        h4{
+            font-size: 0.7em;
+        }
+
+        picture{
+
+
+            width: 50%;
+
+            img{
+
+                width: 100%;
+                border-radius: 2em;
+
+
+            }
+        }
+
+        button{
+            padding: 0.5em 1em;
+        }
+    }
+
+
+
+}
