@@ -28,6 +28,9 @@ class App extends React.Component{
     render(){
         return(
             <div className="container">
+                <header>
+                    <strong>Posts</strong>
+                </header>
                 {this.state.posts.map((post)=>{
                     return(
                         <article key={post.id}>

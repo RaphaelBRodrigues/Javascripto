@@ -1,5 +1,9 @@
 class Processor{
 
+    constructor(){
+        
+    }
+
     static Process(data){
         const lines = data.split("\n");
         let rows = [];
