@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styled';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 export default () => {
-    const teste = useSelector((state) => state);
-    console.log(teste);
+    const [reservesQuantity,setReservesQuantity] = useState(0);
+    const  reserveSize  = useSelector((state) => state.reserve.length); 
+
+
+
     return (
         <S.Header>
             <S.Nav>
@@ -26,7 +29,7 @@ export default () => {
                     </S.NavItem>
                     <S.NavItem>
                         <Link to="reservas">
-                           0 reservas
+                          {reserveSize} reservas
                         </Link>
                     </S.NavItem>
                 </S.Navlist>
